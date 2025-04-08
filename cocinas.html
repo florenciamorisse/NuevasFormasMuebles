@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocinas</title>
+    <link rel="shortcut icon" href="Assets/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleimg.css">
+  </head>
+  <body>
+    <header>
+      <a id="contacto_Whatsapp" target="_blank" href= "https://api.whatsapp.com/send/?phone=541130745583" title="Número de teléfono de contacto de NuevasFormasMuebles" class="float">
+          <img src="Assets/whatsapp.png" class="whatsapp" alt="whatsapp" loading="lazy" />
+        </a>
+      <div class="header_superior">
+        <a href="#"
+          ><img src="Assets/email.png" alt="correo" />
+          contacto@nuevasformasmuebles.com.ar</a
+        >
+        <a href="https://api.whatsapp.com/send/?phone=541130745583" target="_blank"
+          ><img src="Assets/whatsapp.webp" alt="whatsapp" /> +54 113 074 5583</a
+        >
+        <div class="redes">
+          <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank"><img src="Assets/instagram.png" alt="Instagrmam" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank"><img src="Assets/facebook.png" alt="Facebook" /></a>
+          <a href="#" target="_blank"><img src="Assets/pinterest.png" alt="pinterest" /></a>
+        </div>
+      </div>
+      <div class="nav header_principal">
+        <img src="" class="espacio" alt="" />
+        <a href="index.html">
+            <img
+            src="Assets/NF.png"
+            class="logo_cabecera"
+            alt="logo NuevasFormasMuebles"
+            />
+        </a>
+        <div id="menu_interactivo" class="bars__menu">
+          <span id="line1"></span>
+          <span id="line2"></span>
+          <span id="line3"></span>
+        </div>
+      </div>
+      <div class="menu_desplegable" id="menu_desplegable">
+        <ul class="menu_link">
+          <li class="link inicio"><a href="index.html" id="inicio-link">Inicio</a></li>
+          <li class="link nosotros"><a href="nosotros.html" target="_blank" >Nosotros</a></li>
+          <li class="link que_hacemos"><a href="quehacemos.html" target="_blank">Qué hacemos</a></li>
+          <li class="link contacto"><a href="contacto.html" target="_blank">Contacto</a></li>
+          <li class="link redes">
+            <div class="redes_menu_desplegable">
+              <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank"><img src="Assets/instagram.png" alt="instagram de Nuevas Formas" /></a>
+              <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank"><img src="Assets/facebook.png" alt="Facebook de Nuevas Formas" /></a>
+              <a href=""><img src="Assets/pinterest.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="primera_parte">
+        <img
+          class="huella"
+          src="Assets/huellaArbol.png"
+          alt="huella de arbol"
+        />
+        <div class="palabras_main">
+          <p>Cocinas</p>          
+        </div>        
+      </div>
+      <div class="segunda_parte">
+        
+        <div class="contenedor_img">
+          <img src="Assets/cocinas/cocina_10.jpg" alt="">
+          <img src="Assets/cocinas/cocina_11.jpg" alt="">
+          <img src="Assets/cocinas/cocina_12.jpg" alt="">
+          <img src="Assets/cocinas/cocina_13.jpg" alt="">
+          <!-- <img src="Assets/cocinas/cocina_14.jpg" alt=""> -->
+          <img src="Assets/cocinas/cocina_20.jpg" alt="">
+          <img src="Assets/cocinas/cocina_21.jpg" alt="">
+          <img src="Assets/cocinas/cocina_22.jpg" alt="">
+          <img src="Assets/cocinas/cocina_30.jpg" alt="">
+          <img src="Assets/cocinas/cocina_31.jpg" alt="">
+          <img src="Assets/cocinas/cocina_32.jpg" alt="">
+          <img src="Assets/cocinas/cocina_33.jpg" alt="">
+          <img src="Assets/cocinas/cocina_34.jpg" alt="">
+          <img src="Assets/cocinas/cocina_40.jpg" alt="">
+          <img src="Assets/cocinas/cocina_41.jpg" alt="">
+          
+        </div>
+        
+      </div>
+    
+    <div class="tercera_parte">
+      <img src="Assets/NFmueblesArcilla.png" class="logo_arcilla" alt="">
+      <p>nuevasformas.muebles@gmail.com</p>
+      <p>(011) 3074 5583</p>
+      <div class="redes_sociales">
+        <img src="Assets/facebook.png" alt="">
+        <img src="Assets/instagram.png" alt="">
+        <img src="Assets/pinterest.png" alt="">
+      </div>
+    </div>
+    </main>
+    <footer>      
+      <img src="Assets/derechos-de-autor.png" alt="copyright" loading="lazy"/>
+      <p>2025 Copyright ConceptoWeb</p>
+      <a href="https://conceptoweb.com.ar/" target="_blank">
+        <img src="Assets/conceptoWeb.webp" class="logo_concepto_web" alt="ContactoConceptoWeb">
+      </a>
+    </footer>
+    <!-- Popup -->
+<div id="popup" class="popup">
+  <span id="closePopup">&times;</span>
+  <img id="popupImage" src="" alt="Imagen ampliada" />
+  <span id="prev" class="nav-arrow">&#10094;</span>
+  <span id="next" class="nav-arrow">&#10095;</span>
+</div>
+
+    <script src="script.js"></script>
+    <script>
+      const popup = document.getElementById("popup");
+      const popupImage = document.getElementById("popupImage");
+      const closePopup = document.getElementById("closePopup");
+      const nextBtn = document.getElementById("next");
+      const prevBtn = document.getElementById("prev");
+      const images = Array.from(document.querySelectorAll(".contenedor_img img"));
+      let currentIndex = 0;
+    
+      function showImage(index) {
+        currentIndex = index;
+        popupImage.src = images[index].src;
+        popup.style.display = "block";
+      }
+    
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          showImage(index);
+        });
+      });
+    
+      closePopup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+    
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
+    
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+    
+      document.addEventListener("keydown", (e) => {
+        if (popup.style.display === "block") {
+          if (e.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          } else if (e.key === "ArrowLeft") {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+          } else if (e.key === "Escape") {
+            popup.style.display = "none";
+          }
+        }
+      });
+    </script>
+    
+    <!-- <script>
+      const popup = document.getElementById("popup");
+      const popupImage = document.getElementById("popupImage");
+      const closePopup = document.getElementById("closePopup");
+    
+      // Seleccionamos todas las imágenes
+      document.querySelectorAll(".contenedor_img img").forEach(img => {
+        img.addEventListener("click", () => {
+          popup.style.display = "block";
+          popupImage.src = img.src;
+        });
+      });
+    
+      // Cerrar popup al hacer clic en la X
+      closePopup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    
+      // También cerramos si se hace clic fuera de la imagen
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+    </script> -->
+    
+  </body>
+</html>
