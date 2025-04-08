@@ -116,16 +116,6 @@
         <img src="Assets/conceptoWeb.webp" class="logo_concepto_web" alt="ContactoConceptoWeb">
       </a>
     </footer>
-   
-
-    <!-- <div id="popup" class="popup">
-      <span id="closePopup">&times;</span>
-      <div class="popup-content">
-        <span id="prev" class="nav-arrow">&#10094;</span>
-        <img id="popupImage" src="" alt="Imagen ampliada" />
-        <span id="next" class="nav-arrow">&#10095;</span>
-      </div>
-    </div> -->
     <div id="popup" class="popup">
       <div class="popup-content">
         <span id="closePopup">&times;</span>
@@ -133,94 +123,10 @@
         <span id="prev" class="nav-arrow">&#10094;</span>
         <span id="next" class="nav-arrow">&#10095;</span>
       </div>
-    </div>
-    
-
-
-
+    </div>  
 
     <script src="script.js"></script>
-    <script>
-      const popup = document.getElementById("popup");
-      const popupImage = document.getElementById("popupImage");
-      const closePopup = document.getElementById("closePopup");
-      const nextBtn = document.getElementById("next");
-      const prevBtn = document.getElementById("prev");
-      const images = Array.from(document.querySelectorAll(".contenedor_img img"));
-      let currentIndex = 0;
-    
-      function showImage(index) {
-        currentIndex = index;
-        popupImage.src = images[index].src;
-        popup.style.display = "block";
-      }
-    
-      images.forEach((img, index) => {
-        img.addEventListener("click", () => {
-          showImage(index);
-        });
-      });
-    
-      closePopup.addEventListener("click", () => {
-        popup.style.display = "none";
-      });
-    
-      popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-          popup.style.display = "none";
-        }
-      });
-    
-      nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-      });
-    
-      prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-      });
-    
-      document.addEventListener("keydown", (e) => {
-        if (popup.style.display === "block") {
-          if (e.key === "ArrowRight") {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-          } else if (e.key === "ArrowLeft") {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-          } else if (e.key === "Escape") {
-            popup.style.display = "none";
-          }
-        }
-      });
-    </script>
-    
-    <!-- <script>
-      const popup = document.getElementById("popup");
-      const popupImage = document.getElementById("popupImage");
-      const closePopup = document.getElementById("closePopup");
-    
-      // Seleccionamos todas las imágenes
-      document.querySelectorAll(".contenedor_img img").forEach(img => {
-        img.addEventListener("click", () => {
-          popup.style.display = "block";
-          popupImage.src = img.src;
-        });
-      });
-    
-      // Cerrar popup al hacer clic en la X
-      closePopup.addEventListener("click", () => {
-        popup.style.display = "none";
-      });
-    
-      // También cerramos si se hace clic fuera de la imagen
-      popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-          popup.style.display = "none";
-        }
-      });
-    </script> -->
+    <!-- <script src="scriptPopup.js"></script> -->
     
   </body>
 </html>
