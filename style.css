@@ -59,7 +59,7 @@ header {
   align-items: center;
   position: absolute;
   top: 0px;
-  right: 10px;
+  
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -75,12 +75,12 @@ header {
   color: var(--marfil);
   padding: 0 1rem;
 }
-.redes {
+.redes, .redes_menu_desplegable {
   display: flex;
   gap: 10px;
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
 }
-.redes a {
+.redes a, .redes_menu_desplegable a {
   padding: 0% 0.75% 0% 0%;
 }
 .nav {
@@ -217,7 +217,7 @@ main {
 .whatsapp {
   width: 35px;
 }
-.segunda_parte {
+/* .segunda_parte {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -229,7 +229,23 @@ main {
   width: 300px;
   padding-bottom: 10px;
   border-radius: 15px;
+} */
+.segunda_parte {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 columna */
+  gap: 20px;
+  justify-items: center;
+  padding-top: 40px;
 }
+
+.segunda_parte img {
+  /* width: 100%; */
+  width: 300px;
+  border-radius: 15px;
+}
+
+
 .segunda_parte a{
     color: inherit;
     text-decoration: none;  
@@ -253,7 +269,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 100%; */
+  width: 100%;
   padding: 10px;
 }
 form {
@@ -333,6 +349,19 @@ form button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.seccion_contacto {
+  display: flex;
+  flex-direction: column; /* Mobile First: uno abajo del otro */
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.container_form,
+.tercera_parte {
+  width: 100%;
+  max-width: 500px;
+}
 .logo_arcilla{
   height: 5rem;
 }
@@ -372,15 +401,90 @@ footer > p {
 }
 
 @media only screen and (min-width: 768px) {
+  main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 0;
+    margin-top: 55px;
+  }
+  .primera_parte{
+    margin-top: -50px;
+  }
   .header_superior {
     display: flex;
+    position: fixed;
+    height: 1rem;
     background: var(--gradient);
     z-index: 2;
   }
+
+  .redes{
+    padding-right: 50px;
+  }
+  
+  
+  .whatsapp{
+    padding-right: 110px;
+  }
   .header_principal {
-    margin-top: 50px;
+    height: 4rem;
+    margin-top: 36px;
     z-index: 2;
   }
+  .menu_link{
+    margin-top: 4px;
+  }
+  .link{
+    font-size: 1.2rem;
+  }
+  /* .segunda_parte {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1000px;
+  } */
+   .huella{
+    height: 230px;
+   }
+  .segunda_parte {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 780px;
+    margin: 0 auto; /* esto centra horizontalmente */
+    padding: 40px 20px;
+  }
+  .contenedor_img img{
+    margin-bottom: 0;
+  }
 
+  .segunda_parte img {
+
+
+    /* width: 100%; */
+    width: 400px;
+    border-radius: 15px;
+    height: 500px;
+
+
+  }
+
+  .seccion_contacto {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .container_form,
+  .tercera_parte {
+    max-width: 400px;
+  }
+  .tercera_parte{
+    padding-top: 100px;
+    padding-bottom: 0;
+    
+  }
 
 }
