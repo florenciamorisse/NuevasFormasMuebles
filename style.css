@@ -5,22 +5,7 @@
   --grisoscuro: #383734;
   --black: #0f0e0e;
   --amarillo: #f6ac01;
-  --gradient: linear-gradient(
-    45deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(38deg 100% 4%) 8%,
-    hsl(37deg 34% 9%) 17%,
-    hsl(36deg 23% 13%) 25%,
-    hsl(36deg 19% 16%) 33%,
-    hsl(36deg 16% 20%) 42%,
-    hsl(35deg 13% 24%) 50%,
-    hsl(35deg 12% 28%) 58%,
-    hsl(35deg 11% 32%) 67%,
-    hsl(35deg 10% 36%) 75%,
-    hsl(35deg 9% 41%) 83%,
-    hsl(35deg 8% 46%) 92%,
-    hsl(35deg 7% 51%) 100%
-  );
+  
   --gradient2: linear-gradient(
     45deg,
     rgba(5, 5, 5, 1) 0%,
@@ -78,7 +63,6 @@ header {
 .redes, .redes_menu_desplegable {
   display: flex;
   gap: 10px;
-  /* padding-right: 2rem; */
 }
 .redes a, .redes_menu_desplegable a {
   padding: 0% 0.75% 0% 0%;
@@ -118,6 +102,7 @@ header {
   transform-origin: 0px 100%;
   transition: all 600ms;
 }
+
 /* el translate va a variar según la ubicación del menu */
 .closeline1 {
   transform: rotate(50deg) translate(0px, -7px);
@@ -217,30 +202,16 @@ main {
 .whatsapp {
   width: 35px;
 }
-/* .segunda_parte {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 40px;
-}
-.segunda_parte img {
-  width: 300px;
-  padding-bottom: 10px;
-  border-radius: 15px;
-} */
 .segunda_parte {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr; /* mobile: 1 columna */
+  grid-template-columns: 1fr; 
   gap: 20px;
   justify-items: center;
   padding-top: 40px;
 }
 
 .segunda_parte img {
-  /* width: 100%; */
   width: 300px;
   border-radius: 15px;
 }
@@ -288,6 +259,7 @@ form input {
   background-color: transparent;
   font-family: var(--font-Roboto);
   font-size: 16px;
+  color: var(--marfil);
 }
 form textarea{
   width: 332px;
@@ -297,7 +269,8 @@ form textarea{
   margin-bottom: 10px;
   background-color: transparent;
   font-family: var(--font-Roboto);
-  font-size: 16px
+  font-size: 16px;
+  color: var(--marfil);
 }
 input::placeholder {
   color: var(--arcilla);
@@ -351,7 +324,7 @@ form button {
 }
 .seccion_contacto {
   display: flex;
-  flex-direction: column; /* Mobile First: uno abajo del otro */
+  flex-direction: column;
   align-items: center;
   gap: 40px;
   padding: 40px 20px;
@@ -363,7 +336,7 @@ form button {
   max-width: 500px;
 }
 .logo_arcilla{
-  height: 5rem;
+  height: 4rem;
 }
 .redes_sociales {
   display: flex;
@@ -386,7 +359,6 @@ footer {
   z-index: 4;
   align-items: center;
   justify-content: center;
-  /* border-top: 1px solid var(--arcilla); */
 }
 footer img {
   height: 20px;
@@ -414,7 +386,7 @@ footer > p {
     display: flex;
     position: fixed;
     height: 1rem;
-    background: var(--gradient);
+    background: var(--gradient2);
     z-index: 2;
   }
 
@@ -437,12 +409,6 @@ footer > p {
   .link{
     font-size: 1.2rem;
   }
-  /* .segunda_parte {
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 100px;
-    padding-right: 100px;
-    max-width: 1000px;
-  } */
    .huella{
     height: 230px;
    }
@@ -459,14 +425,10 @@ footer > p {
   }
 
   .segunda_parte img {
-
-
-    /* width: 100%; */
-    width: 400px;
-    border-radius: 15px;
+    width: 100%;
     height: 500px;
-
-
+    object-fit: cover; /* recorta sin deformar */
+    border-radius: 15px;
   }
 
   .seccion_contacto {
