@@ -241,6 +241,16 @@ main {
 .whatsapp {
   width: 35px;  
 }
+.contenedor_whatsapp img.whatsapp {
+  /* width: 60px; */
+  animation: pulso 2s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.contenedor_whatsapp img.whatsapp:hover {
+  transform: scale(1.2);
+}
 
 .segunda_parte {
   position: relative;
@@ -417,7 +427,8 @@ footer {
   font-size: 14px;
   padding: 1rem 0;
   display: flex;
-  bottom: 0;
+  position: relative;
+  bottom: 10px;
   width: 100%;
   z-index: 4;
   align-items: center;
@@ -440,7 +451,7 @@ footer > p {
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 0;
-    margin-top: 55px;
+    margin-top: 80px;
   }
   .primera_parte{
     margin-top: -50px;
