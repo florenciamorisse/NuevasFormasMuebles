@@ -78,3 +78,29 @@ const popup = document.getElementById("popup");
           }
         }
       });
+      // window.addEventListener('DOMContentLoaded', () => {
+      //   const mensaje = document.getElementById('mensajeExito');
+      //   if (mensaje) {
+      //     setTimeout(() => {
+      //       mensaje.style.opacity = '0';
+      //       setTimeout(() => {
+      //         mensaje.style.display = 'none';
+      //       }, 500); // tiempo para que se oculte después de la transición
+      //     }, 5000); // 5 segundos visible
+      //   }
+      // });
+      function mostrarMensajeExito() {
+        const mensaje = document.getElementById("mensajeExito");
+        mensaje.style.display = "flex";
+        
+        // Ocultar automáticamente luego de 4 segundos
+        setTimeout(() => {
+          mensaje.style.display = "none";
+        }, 4000);
+      }
+      
+      function cerrarMensaje() {
+        document.getElementById("mensajeExito").style.display = "none";
+      }
+      
+      

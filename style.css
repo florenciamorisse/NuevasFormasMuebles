@@ -38,19 +38,39 @@ header {
 #contacto_Whatsapp{
   z-index: 1;
 }
+.fondo_header_superior {
+  display: none;
+  background: var(--gradient2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.3rem; /* o lo que mida tu header */
+  z-index: 998;
+}
+
+.contenedor_headersuperior {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* uno más arriba que el fondo */
+}
+
 .header_superior {
   display: none;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  top: 0px;
-  
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   height: 30px;
   font-family: var(--font-Roboto);
+  font-size: 13px;
 }
+
 .header_superior img {
   height: 20px;
   margin-bottom: -6px;
@@ -58,7 +78,7 @@ header {
 .header_superior a {
   text-decoration: none;
   color: var(--marfil);
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 .redes, .redes_menu_desplegable {
   display: flex;
@@ -68,15 +88,21 @@ header {
   padding: 0% 0.75% 0% 0%;
 }
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 6rem;
-  width: 100%;
   background: var(--marfil);
   position: fixed;
   top: 0;
+  width: 100%;
   z-index: 2;
+}
+
+.contenedor_nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
 }
 .espacio {
   width: 70px;
@@ -85,13 +111,14 @@ header {
   height: 3rem;
 }
 #menu_interactivo {
-  padding-right: 3rem;
+  padding-right: 2rem;
 }
 
 .bars__menu {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  
 }
 .bars__menu span {
   display: block;
@@ -153,7 +180,7 @@ header {
 }
 .show {
   position: fixed;
-  top: 6rem;
+  top: 5rem;
   left: 0;
   width: 100%;
   transform: translateY(0);
@@ -194,14 +221,27 @@ main {
 .palabras_main p {
   margin: 2px 0px 6px 0px;
 }
+
+
+.contenedor_whatsapp {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Este contenedor nos ayuda a centrar en la página entera */
 .float {
   position: fixed;
+  bottom: 20px;
+  right: 20px; /* Esto lo alinea al borde derecho del contenido centrado */
+  z-index: 100;
   top: 15rem;
-  right: 40px;
 }
+
 .whatsapp {
-  width: 35px;
+  width: 35px;  
 }
+
 .segunda_parte {
   position: relative;
   display: grid;
@@ -234,7 +274,7 @@ main {
   left: 15px;
   font-size: 20px;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .container_form{
   display: flex;
@@ -330,6 +370,29 @@ form button {
   padding: 40px 20px;
 }
 
+/* .mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+} */
+
+
+
 .container_form,
 .tercera_parte {
   width: 100%;
@@ -382,29 +445,36 @@ footer > p {
   .primera_parte{
     margin-top: -50px;
   }
+  .fondo_header_superior {
+    display: flex;
+  }
+  /* .contenedor_headersuperior{
+    background: var(--gradient2);
+    max-width: 1100px;
+    margin: 0 auto;
+    
+  } */
   .header_superior {
     display: flex;
-    position: fixed;
+   
     height: 1rem;
-    background: var(--gradient2);
-    z-index: 2;
+    
+    /* z-index: 2; */
   }
 
   .redes{
-    padding-right: 50px;
+    padding-right: 2rem;
   }
   
   
-  .whatsapp{
-    padding-right: 110px;
-  }
+  
   .header_principal {
-    height: 4rem;
+    height: 5rem;
     margin-top: 36px;
     z-index: 2;
   }
   .menu_link{
-    margin-top: 4px;
+    margin-top: 35px;
   }
   .link{
     font-size: 1.2rem;
@@ -449,4 +519,9 @@ footer > p {
     
   }
 
+}
+@media (min-width: 1100px) {
+  .float {
+    right: calc((100vw - 1100px) / 2);
+  }
 }

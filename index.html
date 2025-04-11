@@ -15,25 +15,34 @@
   </head>
   <body>
     <header>
+      <div class="contenedor_whatsapp">
       <a id="contacto_Whatsapp" target="_blank" href= "https://api.whatsapp.com/send/?phone=541130745583" title="Número de teléfono de contacto de NuevasFormasMuebles" class="float">
         <img src="Assets/whatsapp.png" class="whatsapp" alt="whatsapp" loading="lazy" />
       </a>
-      <div class="header_superior">        
-        <a href="nuevasformas.muebles@gmail.com?Subject=%20Consulta%20por%20mueble%20">
-          <img src="Assets/email.png" alt="correo" />
-          nuevasformas.muebles@gmail.com
-        </a>
-        <a href="https://api.whatsapp.com/send/?phone=541130745583" target="_blank">
-          <img src="Assets/whatsapp.webp" alt="whatsapp" />
-          +54 113 074 5583
-        </a>
-        <div class="redes">
-          <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank"><img src="Assets/instagram.png" alt="Instagrmam" /></a>
-          <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank"><img src="Assets/facebook.png" alt="Facebook" /></a>
-          <a class="margen" href="#" target="_blank"><img src="Assets/pinterest.png" alt="pinterest" /></a>
-        </div>      
+    </div>
+      <div class="fondo_header_superior"></div>
+      <div class="contenedor_headersuperior">
+        <div class="header_superior">        
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nuevasformas.muebles@gmail.com&su=Consulta%20por%20mueble"
+            target="_blank"
+            onclick="window.location.href='mailto:nuevasformas.muebles@gmail.com?subject=Consulta%20por%20mueble'; return true;">
+            <img src="Assets/email.png" alt="correo" />
+            nuevasformas.muebles@gmail.com
+          </a>
+
+          <a href="https://api.whatsapp.com/send/?phone=541130745583" target="_blank">
+            <img src="Assets/whatsapp.webp" alt="whatsapp" />
+            +54 113 074 5583
+          </a>
+          <div class="redes">
+            <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank"><img src="Assets/instagram.png" alt="Instagrmam" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank"><img src="Assets/facebook.png" alt="Facebook" /></a>
+            <a class="margen" href="#" target="_blank"><img src="Assets/pinterest.png" alt="pinterest" /></a>
+          </div>      
+        </div>
       </div>
-      <div class="nav header_principal">
+      <div class="nav">
+      <div class="contenedor_nav header_principal">
         <img src="" class="espacio" alt="" />
         <a href="index.html">
           <img
@@ -48,6 +57,7 @@
           <span id="line3"></span>
         </div>
       </div>
+    </div>
       <div class="menu_desplegable" id="menu_desplegable">
         <ul class="menu_link">
           <li class="link inicio">
@@ -118,6 +128,13 @@
       </div>
       <div class="seccion_contacto">
         <div class="container_form">
+
+          <div class="mensaje-exito" id="mensajeExito" style="display: none;">
+            ¡Mensaje enviado con éxito!
+            <span class="cerrar-mensaje" onclick="cerrarMensaje()">&times;</span>
+          </div>
+          
+
           <form action="enviar.php" method="post">
             <div class="form">
               <p>Contactanos</p>          
@@ -152,5 +169,14 @@
       </a>
     </footer>
     <script src="script.js"></script>
+    <script>
+      // Detecta si hay ?exito=1 en la URL
+      if (window.location.search.includes("exito=1")) {
+        mostrarMensajeExito();
+        // Limpia la URL para que no se vea el parámetro
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    </script>
+    
   </body>
 </html>
