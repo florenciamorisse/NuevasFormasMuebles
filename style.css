@@ -284,7 +284,9 @@ main {
   left: 15px;
   font-size: 20px;
   font-weight: 600;
-  /* text-transform: uppercase; */
+  color:var(--white);
+  text-shadow: -3px 2px 1px rgba(0,0,0,0.34);
+  /* text-shadow: #383734; */
 }
 .container_form{
   display: flex;
