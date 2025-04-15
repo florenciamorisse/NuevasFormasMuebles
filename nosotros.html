@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NuevasFormasMuebles</title>
+    <title>Nosotros</title>
     <link rel="shortcut icon" href="Assets/icon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleimg.css">
   </head>
   <body>
     <header>
@@ -88,26 +89,63 @@
       </div>
     </header>
     <main>
-        <p>Mi nombre es Sebastián Toledo Ríos. Soy arquitecto, carpintero de profesión y diseñador de interiores y mobiliario.
-            Trabajo junto a un equipo de carpinteros y diseñadores industriales con quienes comparto un compromiso profundo con el diseño y la fabricación de muebles de calidad.
-            
-            Nos une la pasión por el diseño, la funcionalidad y el detalle. Creamos muebles a medida que se adaptan a la vida real de cada persona, combinando estética, calidad y practicidad.
-            
+      
+      <div class="bloque_producto">
+        <div class="primera_parte_producto">
+          <img src="Assets/nosotros/foto.jpg" class="foto_circular" alt="">
+          <p class="palabras_producto">Nosotros</p>
+        </div>
+        <div class="segunda">
+          <p>Mi nombre es Sebastián Toledo Ríos. Soy arquitecto, carpintero de profesión y diseñador de interiores y mobiliario. Trabajo junto a un equipo de carpinteros y diseñadores industriales con quienes comparto un compromiso profundo con el diseño y la fabricación de muebles de calidad. </p>
+          <h5>Valores</h5>
+          <p>Nos une la pasión por el diseño, la funcionalidad y el detalle. Creamos muebles a medida que se adaptan a la vida real de cada persona, combinando estética, calidad y practicidad.
             Creemos que cada espacio tiene su propia identidad, y que el mobiliario debe acompañarla de forma única. Por eso, abordamos cada proyecto de manera personalizada, desde la idea inicial hasta la instalación final.
-            
-            Diseñamos, desarrollamos y fabricamos pensando en la durabilidad, utilizando materiales de primera calidad y aplicando técnicas que equilibran lo artesanal con lo industrial y lo contemporáneo.
-            
+          <br/></p>
+          <h5>Objetivo<br/></h5>
+          <p>Diseñamos, desarrollamos y fabricamos pensando en la durabilidad, utilizando materiales de primera calidad y aplicando técnicas que equilibran lo artesanal con lo industrial y lo contemporáneo.
             Ya sea para el hogar, una oficina o un espacio comercial, nos comprometemos a brindar soluciones hechas a medida, con ideas pensadas con dedicación, precisión y experiencia.</p>
+            
+        </div>
+        <div>
+          <img class="foto_inferior_nosotros" src="Assets/nosotros/Nosotros_fondo_inferior.jpg" alt="">
+        </div>
+        <div class="tercera_parte">
+          <img src="Assets/Logo Hi Res - Blanco.png" class="logo_arcilla" alt="">
+          <p>nuevasformas.muebles@gmail.com</p>
+          <p>(011) 3074 5583</p>
+          <div class="redes_sociales">
+            <img src="Assets/facebook.png" alt="">
+            <img src="Assets/instagram.png" alt="">
+            <img src="Assets/pinterest.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+   
+    
+    
     </main>
-    <footer>
+    <footer>      
       <img src="Assets/derechos-de-autor.png" alt="copyright" loading="lazy"/>
       <p>2025 Copyright ConceptoWeb</p>
       <a href="https://conceptoweb.com.ar/" target="_blank">
         <img src="Assets/conceptoWeb.webp" class="logo_concepto_web" alt="ContactoConceptoWeb">
       </a>
     </footer>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup">&times;</span>
+        <img id="popupImage" src="" alt="Imagen ampliada" />
+        <span id="prev" class="nav-arrow">&#10094;</span>
+        <span id="next" class="nav-arrow">&#10095;</span>
+      </div>
+    </div>  
+
     <script src="script.js"></script>
-   
+    
     
   </body>
 </html>
