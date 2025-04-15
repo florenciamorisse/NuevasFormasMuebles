@@ -163,6 +163,7 @@ main{
   .segunda p{
     font-family: var(--font-Roboto);
     font-size: 14px;
+    line-height: 1.3;
   }
    
   .foto_inferior_nosotros {
@@ -176,8 +177,41 @@ main{
     object-fit: cover;
     display: block;
   }
-  
-  
+
+  .parent2, .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en todos los tamaños */
+    gap: 8px;
+  }
+  .parent img, .parent2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }  
+  .div2,
+  .div5,
+  .div6 {
+    grid-column: span 2; /* Ocupan las dos columnas (pantalla completa) */
+  }
+  .div1,
+  .div01,
+  .div3,
+  .div4 {
+    grid-column: span 1; /* Ocupan una columna cada una → en la misma fila */
+  }
+  .div3 img{
+    height: 100px;
+  }
+  .div4 img{
+    height: 100px;
+  }
+  .parent3 img{
+    width: 300px;
+  }
+  .div1 img, .div01 img{
+    margin-bottom: 8px;
+  }
   
   @media only screen and (min-width: 768px) {
     
@@ -226,10 +260,6 @@ main{
       height: 30px;
     }
     
-    /* .tercera_parte{
-     padding-top: 0;
-    } */
-    
     .contenedor_img {        
       grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
       gap: 15px;
@@ -244,6 +274,8 @@ main{
     
     .segunda p{
       font-size: 16px;
+      line-height: 1.6;
+      
     }
     .foto_inferior_nosotros {
       height: 500px;

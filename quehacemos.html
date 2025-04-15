@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qué hacemos</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestra Propuesta</title>
+    <link rel="shortcut icon" href="Assets/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleimg.css">
+  </head>
+  <body>
+    <header>
+      <div class="contenedor_whatsapp">
+      <a id="contacto_Whatsapp" target="_blank" href= "https://api.whatsapp.com/send/?phone=541130745583" title="Número de teléfono de contacto de NuevasFormasMuebles" class="float">
+        <img src="Assets/whatsapp.png" class="whatsapp" alt="whatsapp" loading="lazy" />
+      </a>
+    </div>
+      <div class="fondo_header_superior"></div>
+      <div class="contenedor_headersuperior">
+        <div class="header_superior">        
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nuevasformas.muebles@gmail.com&su=Consulta%20por%20mueble"
+            target="_blank"
+            onclick="window.location.href='mailto:nuevasformas.muebles@gmail.com?subject=Consulta%20por%20mueble'; return true;">
+            <img src="Assets/email.png" alt="correo" />
+            nuevasformas.muebles@gmail.com
+          </a>
+
+          <a href="https://api.whatsapp.com/send/?phone=541130745583" target="_blank">
+            <img src="Assets/whatsapp.webp" alt="whatsapp" />
+            +54 113 074 5583
+          </a>
+          <div class="redes">
+            <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank"><img src="Assets/instagram.png" alt="Instagrmam" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank"><img src="Assets/facebook.png" alt="Facebook" /></a>
+            <a class="margen" href="#" target="_blank"><img src="Assets/pinterest.png" alt="pinterest" /></a>
+          </div>      
+        </div>
+      </div>
+      <div class="nav">
+      <div class="contenedor_nav header_principal">
+        <img src="" class="espacio" alt="" />
+        <a href="index.html">
+          <img
+            src="Assets/Logo Hi Res - Negro.png"
+            class="logo_cabecera"
+            alt="logo NuevasFormasMuebles"
+          />
+        </a>
+        <div id="menu_interactivo" class="bars__menu">
+          <span id="line1"></span>
+          <span id="line2"></span>
+          <span id="line3"></span>
+        </div>
+      </div>
+    </div>
+    <div class="menu_desplegable" id="menu_desplegable">
+      <ul class="menu_link">
+        <li class="link inicio">
+          <a href="#" id="inicio-link">Inicio</a>
+        </li>
+        <li class="link nosotros">
+          <a href="nosotros.html"  >Nosotros</a>
+        </li>
+        <li class="link que_hacemos">
+          <a href="quehacemos.html">Nuestra Propuesta</a>
+        </li>
+        <li class="link contacto">
+          <a href="contacto.html" target="_blank">Contacto</a>
+        </li>
+        <li class="link redes_menu_desplegable ">
+          <div class="redes_menu_desplegable">
+            <a href="https://www.instagram.com/mueblesnuevasformas/" target="_blank">
+              <img src="Assets/instagram.png" alt="instagram de Nuevas Formas" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063790263842" target="_blank">
+              <img src="Assets/facebook.png" alt="Facebook de Nuevas Formas" />
+            </a>
+            <a href=""><img src="Assets/pinterest.png" alt="" />
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </header>
+    <main>
+      
+      <div class="bloque_producto">
+        <!-- <div class="primera_parte_producto">
+          <img src="Assets/nosotros/foto.jpg" class="foto_circular" alt="">
+          <p class="palabras_producto">Nuestra Propuesta</p>
+        </div> -->
+        <div class="segunda segunda_parte">
+            <div class="container">
+                <h2>Nuestra propuesta</h2>
+                <p>Nuestro principal objetivo es ofrecer <strong>soluciones a medida</strong> para cada cliente, diseñando y fabricando muebles que se adaptan a sus necesidades, optimizan sus espacios y resuelven sus requerimientos funcionales y estéticos.</p>
+                
+                <p>Ponemos en cada proyecto toda nuestra experiencia en <strong>Arquitectura, Diseño Industrial y Carpintería</strong>, logrando así que cada mueble cumpla con estos pilares fundamentales:</p>
+            
+                <ul>
+                  <li><strong>Integración al espacio</strong> | Arquitectura de interiores</li>
+                  <li><strong>Funcionalidad y estética</strong> | Diseño industrial</li>
+                  <li><strong>Calidad constructiva</strong> | Carpintería profesional</li>
+                </ul>
+            
+                <p>Nos especializamos en la fabricación de <strong>muebles de diseño a medida</strong>, entendiendo por diseño no solo lo visual, sino también la capacidad de integrar distintos materiales y técnicas: placas industrializadas, maderas naturales, herrería, piezas especiales, lacas y pinturas, tapicería, vidrios, cueros y apliques.</p>
+            
+                <h3>Modalidades de trabajo | Servicios</h3>
+            
+                <p><strong>Muebles para clientes particulares</strong><br>
+                Partimos de una necesidad puntual —ya sea un mueble único o un conjunto— y diseñamos propuestas personalizadas desde cero o adaptamos soluciones disponibles en nuestro catálogo.</p>
+            
+                <p><strong>Amoblamientos para reformas u obras medianas</strong><br>
+                Aplicamos los mismos criterios que en obras grandes, pero en menor escala. Esto permite reducir los costos de documentación, verificación y, en algunos casos, evitar el modelado del espacio de implantación si los requerimientos lo permiten.</p>
+
+                <div class="parent">
+                    <div class="div1">
+                        <img src="Assets/que_hacemos/que_hacemos01.jpg" alt="">
+                        <img src="Assets/que_hacemos/que_hacemos02.jpg" alt="">
+                    </div>
+                    <div class="div01">
+                        <img src="Assets/que_hacemos/que_hacemos03.jpg" alt="">
+                        <img src="Assets/que_hacemos/que_hacemos04.jpg" alt="">
+                    </div>
+                </div>
+
+                <p><strong>Amoblamientos para proyectos y grandes obras de arquitectura</strong><br>
+                Nos encargamos del proceso completo de diseño, fabricación e instalación de mobiliario. A partir de planos e información técnica (en formato PDF, DWG, etc.) generamos un modelo 3D en <strong>Revit</strong> del espacio y desarrollamos las familias de muebles, también en 3D.</p>
+
+                <div class="parent2">
+                    <div class="div2">
+                        <img src="Assets/que_hacemos/que_hacemos05.jpg" alt=""> </div>
+                    <div class="div3">
+                        <img src="Assets/que_hacemos/que_hacemos06.jpg" alt=""> 
+                    </div>
+                    <div class="div4">
+                        <img src="Assets/que_hacemos/que_hacemos07.jpg" alt="">
+                    </div>
+                    <div class="div5">
+                        <img src="Assets/que_hacemos/que_hacemos08.png" alt="">
+                    </div>
+                    <div class="div6">
+                        <img src="Assets/que_hacemos/que_hacemos09.png" alt="">
+                    </div>
+                </div>
+              
+            
+                <p>Mediante esta metodología de trabajo <strong>BIM (Building Information Modeling)</strong>, logramos:</p>
+                <ul>
+                  <li>Validar previamente cada detalle crítico (medidas, colores, funcionamiento).</li>
+                  <li>Minimizar errores durante la fabricación.</li>
+                  <li>Optimizar los tiempos y procesos con tecnología CNC.</li>
+                </ul>
+
+                <div class="parent3">
+                    <img src="Assets/que_hacemos/que_hacemos10.jpg" alt="">
+                    <img src="Assets/que_hacemos/que_hacemos11.jpg" alt="">
+                </div>
+              </div>
+            
+        </div>
+        <!-- <div>
+          <img class="foto_inferior_nosotros" src="Assets/nosotros/Nosotros_fondo_inferior.jpg" alt="">
+        </div> -->
+        <div class="tercera_parte">
+          <img src="Assets/Logo Hi Res - Blanco.png" class="logo_arcilla" alt="">
+          <p>nuevasformas.muebles@gmail.com</p>
+          <p>(011) 3074 5583</p>
+          <div class="redes_sociales">
+            <img src="Assets/facebook.png" alt="">
+            <img src="Assets/instagram.png" alt="">
+            <img src="Assets/pinterest.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+   
     
-</body>
+    
+    </main>
+    <footer>      
+      <img src="Assets/derechos-de-autor.png" alt="copyright" loading="lazy"/>
+      <p>2025 Copyright ConceptoWeb</p>
+      <a href="https://conceptoweb.com.ar/" target="_blank">
+        <img src="Assets/conceptoWeb.webp" class="logo_concepto_web" alt="ContactoConceptoWeb">
+      </a>
+    </footer>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup">&times;</span>
+        <img id="popupImage" src="" alt="Imagen ampliada" />
+        <span id="prev" class="nav-arrow">&#10094;</span>
+        <span id="next" class="nav-arrow">&#10095;</span>
+      </div>
+    </div>  
+
+    <script src="script.js"></script>
+    
+    
+  </body>
 </html>
