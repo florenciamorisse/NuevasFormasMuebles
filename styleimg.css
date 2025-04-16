@@ -232,7 +232,25 @@ main{
   .div1 img, .div01 img{
     margin-bottom: 8px;
   }
+  
+  /* PROVEEDORES */
 
+  .proveedores{
+    max-width: 800px;
+    margin: 0 auto; /* centra horizontalmente */
+    padding: 40px 40px;
+  }
+  .logos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  .logos img{
+    height: 70px;
+    margin: 10px;
+    border-radius: 15px;
+  }
   
   .tercera_parte_nuestra_propuesta{
     margin-top: 0;
@@ -262,8 +280,11 @@ main{
     .nosotros, .nuestra_propuesta {
       font-size: 1.1rem;
     }
-    .parent2, .parent, .parent3 {
+    .parent2, .parent{
       margin: 50px 0;
+    }
+    .parent3 {
+      margin-top: 50px;
     }
 
     .foto_inferior_nosotros {
