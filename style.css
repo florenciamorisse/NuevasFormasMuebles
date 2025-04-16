@@ -178,6 +178,18 @@ header {
   display: flex;  
   height: 15px;
 }
+
+.menu_desplegable {
+  transform: translateY(-100%);
+  transition: transform 600ms ease;
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
 .show {
   position: fixed;
   top: 5rem;
@@ -365,7 +377,7 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 .tercera_parte p {
@@ -382,31 +394,7 @@ form button {
   padding: 40px 20px;
 }
 
-/* .mensaje-exito {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  transition: opacity 0.5s ease;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-} */
-
-
-
-.container_form,
-.tercera_parte {
+.container_form{
   width: 100%;
   max-width: 500px;
 }

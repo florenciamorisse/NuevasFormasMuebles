@@ -2,26 +2,62 @@ window.onload = function () {
   window.scrollTo(0, 0);
 };
 
+
 let bar_menu = document.getElementById("menu_interactivo");
 let bar1 = document.getElementById("line1");
 let bar2 = document.getElementById("line2");
 let bar3 = document.getElementById("line3");
 let menu_desplegable = document.getElementById("menu_desplegable");
-let inicio= document.getElementById("inicio-link");
+let inicio = document.getElementById("inicio-link");
 
-
-bar_menu.addEventListener("click", function animateBars() {
+function toggleMenu() {
   bar1.classList.toggle("closeline1");
   bar2.classList.toggle("closeline2");
   bar3.classList.toggle("closeline3");
   menu_desplegable.classList.toggle("show");
+}
+
+function closeMenu() {
+  bar1.classList.remove("closeline1");
+  bar2.classList.remove("closeline2");
+  bar3.classList.remove("closeline3");
+  menu_desplegable.classList.remove("show");
+}
+
+bar_menu.addEventListener("click", function (event) {
+  event.stopPropagation(); // Evita que se dispare el evento del document
+  toggleMenu();
 });
-inicio.addEventListener("click", function animateBars() {
-  bar1.classList.toggle("closeline1");
-  bar2.classList.toggle("closeline2");
-  bar3.classList.toggle("closeline3");
-  menu_desplegable.classList.toggle("show");
+
+inicio.addEventListener("click", function () {
+  closeMenu();
 });
+
+
+// Cierra el menú si hacés clic fuera
+document.addEventListener("click", function (event) {
+  if (!menu_desplegable.contains(event.target) && !bar_menu.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+//para hacer click en cualquier lado li en el menu desplegable
+
+document.querySelectorAll(".menu_link li").forEach(li => {
+  li.addEventListener("click", function (e) {
+    const link = li.querySelector("a");
+    if (link && link.href && link.getAttribute("href") !== "#") {
+      // Abre en nueva pestaña si tiene target="_blank"
+      if (link.target === "_blank") {
+        window.open(link.href, '_blank');
+      } else {
+        window.location.href = link.href;
+      }
+    }
+  });
+});
+
+
 
 // PopUp
 
@@ -78,17 +114,7 @@ const popup = document.getElementById("popup");
           }
         }
       });
-      // window.addEventListener('DOMContentLoaded', () => {
-      //   const mensaje = document.getElementById('mensajeExito');
-      //   if (mensaje) {
-      //     setTimeout(() => {
-      //       mensaje.style.opacity = '0';
-      //       setTimeout(() => {
-      //         mensaje.style.display = 'none';
-      //       }, 500); // tiempo para que se oculte después de la transición
-      //     }, 5000); // 5 segundos visible
-      //   }
-      // });
+
       function mostrarMensajeExito() {
         const mensaje = document.getElementById("mensajeExito");
         mensaje.style.display = "flex";
