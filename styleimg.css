@@ -30,7 +30,7 @@ main{
 .bloque_producto {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 100px;
 }
 .primera_parte_producto {
   display: flex;
@@ -160,12 +160,26 @@ main{
     right: 10px;
   }
   /* Nosotros */
+
+  .nosotros, .nuestra_propuesta {
+    max-width: 800px;
+    margin: 0 auto; /* centra horizontalmente */
+    padding: 40px 40px;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-family: var(--font-Roboto);
+  }
+  
+  .nuestra_propuesta ul>li{
+    line-height: 2;
+  }
   .segunda p{
     font-family: var(--font-Roboto);
     font-size: 14px;
     line-height: 1.3;
   }
-   
+    
   .foto_inferior_nosotros {
     position: relative;
     left: 50%;
@@ -232,6 +246,10 @@ main{
       padding-top: 0;
       padding-bottom: 0;
       
+
+    }
+    .nosotros, .nuestra_propuesta {
+      font-size: 1.1rem;
     }
     .tercera_parte {
       display: flex;
@@ -265,7 +283,7 @@ main{
       gap: 15px;
     }
     .segunda {
-      max-width: 800px; /* o lo que prefieras */
+      max-width: 800px; 
       margin: 0 auto;
       text-align: left;
       padding: 20px;

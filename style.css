@@ -366,6 +366,9 @@ form button {
   font-family: var(--font-Roboto);
   cursor: pointer;
 }
+.btn_enviar:hover{
+  background-color: var(--arcilla);
+}
 .container_form p {
   font-size: 22px;
   font-weight: 500;
@@ -390,14 +393,15 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 40px 20px;
+  
+  margin-bottom: 50px;
 }
 
 .container_form{
   width: 100%;
   max-width: 500px;
 }
+
 .logo_arcilla{
   height: 4rem;
 }
@@ -506,19 +510,34 @@ footer > p {
   }
 
   .seccion_contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* centrado vertical */
+    max-width: 780px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 20px 0 50px 0;
+  }
+  
+
+  /* .seccion_contacto {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     max-width: 780px;
     margin: 0 auto;
-  }
+    gap: 40px;
+    margin: 20px 0 50px 0;
+  } */
 
   .container_form,
   .tercera_parte {
     max-width: 400px;
+    justify-content: center;
   }
   .tercera_parte{
-    padding-top: 100px;
+    
     padding-bottom: 0;
     
   }
