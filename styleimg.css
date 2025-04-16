@@ -208,7 +208,6 @@ main{
     border-radius: 6px;
   }  
   .div2,
-  .div5,
   .div6,
   .div7,
   .div8 {
@@ -220,16 +219,21 @@ main{
   .div4 {
     grid-column: span 1; /* Ocupan una columna cada una → en la misma fila */
   }
-  .div3 img{
-    height: 100px;
-  }
-  .div4 img{
-    height: 100px;
+
+
+  .div3 img,
+  .div4 img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* o ajustá según el formato real de tus imágenes */
+    object-fit: cover;
+    border-radius: 6px;
   }
   
   .div1 img, .div01 img{
     margin-bottom: 8px;
   }
+
+  
   .tercera_parte_nuestra_propuesta{
     margin-top: 0;
   }
