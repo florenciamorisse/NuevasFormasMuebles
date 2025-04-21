@@ -240,14 +240,23 @@ main{
     margin: 0 auto; /* centra horizontalmente */
     padding: 40px 40px;
   }
-  .logos{
-    display: flex;
+  .logos{display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center; /* Esto centra los logos horizontalmente */
+    gap: 16px; /* opcional: espacio entre los logos */
+    padding: 20px 0; /* opcional: espacio arriba y abajo */
 
   }
-  .logos img{
+  .logos a:nth-child(1) img, 
+  .logos a:nth-child(2) img{
     height: 70px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  .logos a:nth-child(3) img, 
+  .logos a:nth-child(4) img{
+    height: 50px;
     margin: 10px;
     border-radius: 15px;
   }

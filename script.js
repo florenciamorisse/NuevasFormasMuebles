@@ -9,6 +9,7 @@ let bar2 = document.getElementById("line2");
 let bar3 = document.getElementById("line3");
 let menu_desplegable = document.getElementById("menu_desplegable");
 let inicio = document.getElementById("inicio-link");
+let contactoLink = document.getElementById("contacto-link");
 
 function toggleMenu() {
   bar1.classList.toggle("closeline1");
@@ -56,6 +57,22 @@ document.querySelectorAll(".menu_link li").forEach(li => {
     }
   });
 });
+
+
+//contacto
+contactoLink.addEventListener("click", function (e) {
+  e.preventDefault(); // Evita el salto automático
+
+  // Cierra el menú
+  closeMenu();
+
+  // Hace scroll suave a la sección con id="contacto"
+  const contactoSection = document.getElementById("contacto");
+  if (contactoSection) {
+    contactoSection.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
 
 
 
