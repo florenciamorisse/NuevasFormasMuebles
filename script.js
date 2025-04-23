@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let contactoLink = document.getElementById("contacto-link");
   let formulario= document.getElementById("formulario");
   let spinner= document.getElementById("spinner");
-  let mensajeExito= document.getElementById("mensajeExito");
+  // let mensajeExito= document.getElementById("mensajeExito");
 
 
   function toggleMenu() {
@@ -75,12 +75,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       spinner.classList.add('none');      
       formulario.submit();
-      formulario.reset();
-
-     
-    }, 3000)
-    
+      // formulario.reset();     
+    }, 3000)    
   }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("exito") === "1") {
+    const mensajeExito = document.getElementById("mensajeExito");
+    if (mensajeExito) {
+      mensajeExito.classList.remove("none");
+      mensajeExito.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        mensajeExito.classList.add("none");
+      }, 5000);
+    }
+  }
+});
+
+
 
   document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
@@ -93,14 +105,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
       }
     }
-  });
+ 
   
 
 
 
   // PopUp
 
-  const popup = document.getElementById("popup");
+        const popup = document.getElementById("popup");
         const popupImage = document.getElementById("popupImage");
         const closePopup = document.getElementById("closePopup");
         const nextBtn = document.getElementById("next");
@@ -186,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
         //     }
         //   }
         // });
+      });
         
 
 
-    });
     
