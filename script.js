@@ -60,12 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-  });
-
-
-
-  
-        
+  }); 
 
 
 
@@ -139,6 +134,31 @@ document.addEventListener("DOMContentLoaded", function () {
             contactoSection.scrollTo({ behavior: "smooth" });
           }
         });
+
+
+        // Mostrar mensaje de éxito
+function mostrarMensajeExito() {
+  const mensajeExito = document.getElementById("mensajeExito");
+  mensajeExito.style.display = "block"; // Muestra el mensaje
+
+  // Opcional: esconder el mensaje después de 3 segundos
+  setTimeout(function () {
+    mensajeExito.style.display = "none";
+  }, 3000); // 3 segundos
+}
+
+// Llamar a la función cuando se envíe el formulario
+const formulario = document.getElementById("formulario"); // Reemplaza 'formulario' con el ID real de tu formulario
+
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+  // Aquí iría el código para procesar el formulario (por ejemplo, enviarlo a un servidor)
+
+  // Después de procesar, mostrar el mensaje de éxito
+  mostrarMensajeExito();
+});
+
 
 
     });
