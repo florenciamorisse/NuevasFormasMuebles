@@ -3,10 +3,8 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Todo tu código va acá adentro
-  console.log("DOM totalmente cargado");
-
-
+ 
+ 
   let bar_menu = document.getElementById("menu_interactivo");
   let bar1 = document.getElementById("line1");
   let bar2 = document.getElementById("line2");
@@ -14,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let menu_desplegable = document.getElementById("menu_desplegable");
   let inicio = document.getElementById("inicio-link");
   let contactoLink = document.getElementById("contacto-link");
+  let formulario= document.getElementById("formulario");
+  let spinner= document.getElementById("spinner");
+  let mensajeExito= document.getElementById("mensajeExito");
+
 
   function toggleMenu() {
     bar1.classList.toggle("closeline1");
@@ -61,6 +63,38 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }); 
+
+  formulario.addEventListener('submit', enviarEmail)
+
+
+  function enviarEmail(e){
+    e.preventDefault();
+    spinner.classList.remove('none');
+
+    setTimeout(()=>{
+
+      spinner.classList.add('none');      
+      formulario.submit();
+      formulario.reset();
+
+     
+    }, 3000)
+    
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("exito") === "1") {
+      const mensajeExito = document.getElementById("mensajeExito");
+      if (mensajeExito) {
+        mensajeExito.classList.remove("none");
+        setTimeout(() => {
+          mensajeExito.classList.add("none");
+        }, 5000);
+      }
+    }
+  });
+  
 
 
 
@@ -136,29 +170,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        // Mostrar mensaje de éxito
-function mostrarMensajeExito() {
-  const mensajeExito = document.getElementById("mensajeExito");
-  mensajeExito.style.display = "block"; // Muestra el mensaje
-
-  // Opcional: esconder el mensaje después de 3 segundos
-  setTimeout(function () {
-    mensajeExito.style.display = "none";
-  }, 3000); // 3 segundos
-}
-
-// Llamar a la función cuando se envíe el formulario
-const formulario = document.getElementById("formulario"); // Reemplaza 'formulario' con el ID real de tu formulario
-
-formulario.addEventListener("submit", function (e) {
-  e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-
-  // Aquí iría el código para procesar el formulario (por ejemplo, enviarlo a un servidor)
-
-  // Después de procesar, mostrar el mensaje de éxito
-  mostrarMensajeExito();
-});
-
+        // document.addEventListener("DOMContentLoaded", function () {
+        //   const params = new URLSearchParams(window.location.search);
+        //   const exito = params.get("exito");
+        
+        //   if (exito === "1") {
+        //     const mensajeExito = document.getElementById("mensajeExito");
+        //     if (mensajeExito) {
+        //       mensajeExito.style.display = "block";
+        
+        //       // Opcional: esconder el mensaje después de 5 segundos
+        //       setTimeout(() => {
+        //         mensajeExito.style.display = "none";
+        //       }, 5000);
+        //     }
+        //   }
+        // });
+        
 
 
     });

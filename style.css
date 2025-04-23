@@ -353,7 +353,6 @@ textarea::placeholder {
 }
 form button {
   display: flex;
-
   justify-content: center;
   align-items: center;
   width: 100px;
@@ -366,6 +365,13 @@ form button {
   font-family: var(--font-Roboto);
   cursor: pointer;
 }
+.btn_enviar{
+  margin-bottom: 24px;
+  background-color: rgb(216, 15, 15);
+}
+.none{
+  display: none;
+}
 .btn_enviar:hover{
   background-color: var(--arcilla);
 }
@@ -377,8 +383,8 @@ form button {
   color: var(--white);
 }
 
-.mensaje-exito {
-  display: none; /* Lo mantenemos oculto hasta que se muestre */
+
+.mensaje_exito {
   padding: 10px;
   background-color: #28a745; /* Verde para indicar éxito */
   color: white;
@@ -549,8 +555,10 @@ footer > p {
     justify-content: center;
   }
   .tercera_parte{
-    
+        
     padding-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 90px;
     
   }
 

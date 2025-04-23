@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="spinner.css">
   </head>
   <body>
     <header>
@@ -140,7 +141,7 @@
           </div>
           
 
-          <form action="enviar.php" method="post">
+          <form action="enviar.php" method="post" id="formulario">
             <div class="form">
               <p>Contactanos</p>          
               <input type="text" id="name" name="name" placeholder="Escriba su nombre" required>
@@ -152,11 +153,19 @@
               <textarea id="message" name="message" placeholder="Escriba su mensaje" required></textarea>
             </div>
             <button class="btn_enviar" type="submit">Enviar</button>
+            <div class="sk-chase none" id="spinner">
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+            </div>
+            <div id="mensajeExito" class="mensaje_exito none" >
+              <p>¡Gracias! Tu mensaje ha sido enviado con éxito.</p>
+            </div>
           </form>
-
-          <div id="mensajeExito" class="mensaje-exito">
-            <p>¡Gracias! Tu mensaje ha sido enviado con éxito.</p>
-          </div>
+          
           
 
 

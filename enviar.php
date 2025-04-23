@@ -1,38 +1,42 @@
-<?php
-// Verificamos que los datos hayan sido enviados
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nombre = htmlspecialchars($_POST["name"]);
-  $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-  $mensaje = htmlspecialchars($_POST["message"]);
+<?php 
+header("Location: http://www.nuevasformasmuebles.com.ar");
 
-  $destinatario = "nuevasformas.muebles@gmail.com"; 
-  $asunto = "Nuevo mensaje de contacto de $nombre";
-  $contenido = "Nombre: $nombre\n";
-  $contenido .= "Email: $email\n";
-  $contenido .= "Mensaje:\n$mensaje\n";
-  $headers = "From: $email";
+$var=
 
-  // Si el mail se envió con éxito:
-header("Location: contacto.html?exito=1");
-exit();
+	$nombre = $_POST['name'];  
+	$email = $_POST['email'];
+	$mensaje = $_POST['message'];
+
+	$destinatario= "contacto@nuevasformasmuebles.com.ar";
+	$asunto = 'Envío desde la web';
+	$cuerpo= '
+		<html>
+			<head>
+				<title> Prueba de envío de correo</title>
+			</head>
+			<body>
+				<h1>Solicitud de contacto</h1>
+				<p>
+					<b>Nombre:</b> '.$nombre .' <br>				
+					<b>Email:</b> '.$email.' <br>
+					<b>Mensaje:</b> '.$mensaje .' <br>
+				</p>
+			</body>
+		</html>
+	';
+
+	//para envío formulario html
+
+	$headers = "MIME-vERSION:1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+	//direccióndel remitente
+
+	$headers .= "FROM: $nombre <$email>\r\n";
+	mail( $destinatario , $asunto, $cuerpo, $headers);
 
 
-  // if (mail($destinatario, $asunto, $contenido, $headers)) {
-  //   $mensaje_exito = "¡Gracias por contactarnos! Te responderemos pronto.";
-  // } else {
-  //   $mensaje_exito = "Hubo un error al enviar el mensaje. Por favor, intentá más tarde.";
-  // }
 
-  // if (mail($destinatario, $asunto, $contenido, $headers)) {
-  //   echo "<script>
-  //     alert('Mensaje enviado correctamente.');
-  //     window.location.href = 'index.html';
-  //   </script>";
-  // } else {
-  //   echo "<script>
-  //     alert('Error al enviar el mensaje. Intente nuevamente.');
-  //     window.history.back();
-  //   </script>";
-  // }
-}
+	
 ?>
+
