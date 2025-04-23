@@ -5,7 +5,7 @@
   --grisoscuro: #383734;
   --black: #0f0e0e;
   --amarillo: #f6ac01;
-  
+
   --gradient2: linear-gradient(
     45deg,
     rgba(5, 5, 5, 1) 0%,
@@ -35,7 +35,7 @@ body {
 header {
   height: 6rem;
 }
-#contacto_Whatsapp{
+#contacto_Whatsapp {
   z-index: 1;
 }
 .fondo_header_superior {
@@ -80,11 +80,13 @@ header {
   color: var(--marfil);
   padding: 0 0.5rem;
 }
-.redes, .redes_menu_desplegable {
+.redes,
+.redes_menu_desplegable {
   display: flex;
   gap: 10px;
 }
-.redes a, .redes_menu_desplegable a {
+.redes a,
+.redes_menu_desplegable a {
   padding: 0% 0.75% 0% 0%;
 }
 .nav {
@@ -118,7 +120,6 @@ header {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  
 }
 .bars__menu span {
   display: block;
@@ -170,12 +171,12 @@ header {
   text-decoration: none;
   color: var(--marfil);
 }
-.redes_menu_desplegable{
+.redes_menu_desplegable {
   display: flex;
   gap: 10px;
 }
 .redes_menu_desplegable a {
-  display: flex;  
+  display: flex;
   height: 15px;
 }
 
@@ -188,7 +189,6 @@ header {
   width: 100%;
   z-index: 1;
 }
-
 
 .show {
   position: fixed;
@@ -234,7 +234,6 @@ main {
   margin: 2px 0px 6px 0px;
 }
 
-
 .contenedor_whatsapp {
   max-width: 1100px;
   margin: 0 auto;
@@ -251,7 +250,7 @@ main {
 }
 
 .whatsapp {
-  width: 35px;  
+  width: 35px;
 }
 .contenedor_whatsapp img.whatsapp {
   /* width: 60px; */
@@ -267,7 +266,7 @@ main {
 .segunda_parte {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 20px;
   justify-items: center;
   padding-top: 40px;
@@ -278,15 +277,14 @@ main {
   border-radius: 15px;
 }
 
-
-.segunda_parte a{
-    color: inherit;
-    text-decoration: none;  
+.segunda_parte a {
+  color: inherit;
+  text-decoration: none;
 }
 .contenedor_img {
   position: relative;
 }
-.contenedor_img img{
+.contenedor_img img {
   padding: 0%;
   margin-bottom: 10px;
 }
@@ -296,11 +294,11 @@ main {
   left: 15px;
   font-size: 20px;
   font-weight: 600;
-  color:var(--white);
-  text-shadow: -3px 2px 1px rgba(0,0,0,0.34);
+  color: var(--white);
+  text-shadow: -3px 2px 1px rgba(0, 0, 0, 0.34);
   /* text-shadow: #383734; */
 }
-.container_form{
+.container_form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,10 +311,9 @@ form {
   align-items: center; /* Centra el botón horizontalmente */
 }
 
-
 form input {
   width: 332px;
-  height:47px;
+  height: 47px;
   border-radius: 10px;
   border-color: var(--white);
   margin-bottom: 10px;
@@ -325,9 +322,9 @@ form input {
   font-size: 16px;
   color: var(--marfil);
 }
-form textarea{
+form textarea {
   width: 332px;
-  height:161px;
+  height: 161px;
   border-radius: 10px;
   border-color: var(--white);
   margin-bottom: 10px;
@@ -342,7 +339,6 @@ input::placeholder {
   font-size: 16px;
   padding-top: 5px;
   padding-left: 5px;
-  
 }
 textarea::placeholder {
   color: var(--arcilla);
@@ -365,14 +361,14 @@ form button {
   font-family: var(--font-Roboto);
   cursor: pointer;
 }
-.btn_enviar{
+.btn_enviar {
   margin-bottom: 24px;
   background-color: rgb(216, 15, 15);
 }
-.none{
+.none {
   display: none;
 }
-.btn_enviar:hover{
+.btn_enviar:hover {
   background-color: var(--arcilla);
 }
 .container_form p {
@@ -383,7 +379,6 @@ form button {
   color: var(--white);
 }
 
-
 .mensaje_exito {
   padding: 10px;
   background-color: #28a745; /* Verde para indicar éxito */
@@ -392,7 +387,6 @@ form button {
   border-radius: 5px;
   margin-top: 20px;
 }
-
 
 .tercera_parte {
   display: flex;
@@ -411,23 +405,23 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   margin-bottom: 50px;
 }
 
-.container_form{
+.container_form {
   width: 100%;
   max-width: 500px;
 }
 
-.logo_arcilla{
+.logo_arcilla {
   height: 4rem;
 }
 .redes_sociales {
   display: flex;
   flex-direction: row;
 }
-.redes_sociales img{
+.redes_sociales img {
   width: 20px;
   padding: 5px;
 }
@@ -462,13 +456,13 @@ footer > p {
   .logo_cabecera {
     height: 4rem;
   }
-  main{
+  main {
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 0;
     margin-top: 80px;
   }
-  .primera_parte{
+  .primera_parte {
     margin-top: -50px;
   }
   .fondo_header_superior {
@@ -482,32 +476,30 @@ footer > p {
   } */
   .header_superior {
     display: flex;
-   
+
     height: 1rem;
-    
+
     /* z-index: 2; */
   }
 
-  .redes{
+  .redes {
     padding-right: 2rem;
   }
-  
-  
-  
+
   .header_principal {
     height: 5rem;
     margin-top: 36px;
     z-index: 2;
   }
-  .menu_link{
+  .menu_link {
     margin-top: 35px;
   }
-  .link{
+  .link {
     font-size: 1.2rem;
   }
-   .huella{
+  .huella {
     height: 230px;
-   }
+  }
   .segunda_parte {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -516,7 +508,7 @@ footer > p {
     margin: 0 auto; /* esto centra horizontalmente */
     padding: 40px 20px;
   }
-  .contenedor_img img{
+  .contenedor_img img {
     margin-bottom: 0;
   }
 
@@ -537,7 +529,6 @@ footer > p {
     gap: 40px;
     padding: 20px 0 50px 0;
   }
-  
 
   /* .seccion_contacto {
     flex-direction: row;
@@ -554,14 +545,11 @@ footer > p {
     max-width: 400px;
     justify-content: center;
   }
-  .tercera_parte{
-        
+  .tercera_parte {
     padding-bottom: 0;
     margin-top: 0px;
     margin-bottom: 90px;
-    
   }
-
 }
 @media (min-width: 1100px) {
   .float {
